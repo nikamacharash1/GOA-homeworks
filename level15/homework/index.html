@@ -1,0 +1,63 @@
+<!-- 1. შექმენით ფორმა სახელის, ელფოსტისა და პაროლის შეყვანის ველებით.
+2. დაამატეთ ჩამოსაშლელი მენიუ ქვეყნის ასარჩევად.
+3. შექმენით რადიოს ტიპის ღილაკების ჯგუფი სქესის შესარჩევად.
+4. ჩართეთ მონიშვნის ველი, რომ დაეთანხმოთ პირობებს(მაგალითად I am accepting privacy polices).
+5. შექმენით ჩამოსაშლელი მენიუ საყვარელი ჰობის შესარჩევად.
+6. დაამატეთ ფაილის ატვირთვის შეყვანა პროფილის სურათებისთვის.
+7. შექმენით თარიღის ამომრჩევი ველი, დაბადების თარიღის ასარჩევად.
+8. ჩექმენით Submit ღილაკი, რომელიც ადასტურებს ფორმის შეყვანებს.
+9. დაამატეთ Reset ღილაკი, რომელიც ფორმის ყველა ველს გაასუფთავებს.
+10. შექმენით მოსანიშნი მენიუ სადაც შეგეძლებათ აირჩიოთ რომელი გყავთ და/ძმა/ორივე(აუცილებლად უნდა შეგეძლოთ მხოლოდ ერთის არჩვა) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="email" placeholder="Please enter your email">
+    <br>
+            
+    <input type="password" placeholder="Please enter your password">
+    <br>
+    <input type="text" placeholder="please enter your name">
+    <br>
+    <input type="file">
+    <select name="country" id="country">
+
+        <option>country</option>
+        <option value="saqartvelo">saqartvelo</option>
+        <option value="amerika">amerika</option>
+        <option value="indoeti">indoeti</option>
+    </select>
+
+    <input type="radio" id="male" >
+    <label for="male">male</label>
+    <br>
+    <input type="radio" id="female">
+    <label for="female">female</label>
+
+
+    <br>
+    <input type="checkbox" id="terms"required>
+    <label for="terms">i am accepting privacy polices</label>
+    
+    <select name="hobi" id="hobi">hobi
+        <option value="pexburti">pexburti</option>
+        <option value="kalatburti">kalatburti</option>
+    </select>
+    <button>Sign Up</button>
+    <input type="date" >
+    <input type="submit">
+    <input type="reset">
+
+    <select name="dedmamishvili" id="dedmamishvili" required>
+        <option value="da">da</option>
+        <option value="zma">zma</option>
+        <option value="orive">orive</option>
+    </select>
+
+</body>
+</html>

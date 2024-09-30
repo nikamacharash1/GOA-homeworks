@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d80000;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #17da10;
+    border-radius: 0;
+}
+
+.box:hover {
+    transform: rotate(90deg);
+    border-radius: 50%;
+}

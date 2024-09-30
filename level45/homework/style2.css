@@ -1,0 +1,42 @@
+<<<<<<< HEAD
+.parent {
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+img {
+    
+    width: 200px;
+    height: 200px;
+    border: 3px solid rgb(0, 255, 42);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+=======
+.parent {
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+img {
+    
+    width: 200px;
+    height: 200px;
+    border: 3px solid rgb(0, 255, 42);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+>>>>>>> bac92c47168eeed9b1c41322530f9bf4e090690f
+}

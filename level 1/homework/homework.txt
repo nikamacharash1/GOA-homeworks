@@ -1,0 +1,7 @@
+name = "nika" 
+surname = "macharashvili"  
+age = 15    
+height = 160.5   
+knows_programming = False
+is_handsome = True
+print("I am"+ " " + name + " " + surname + " " + "I am" + "" + str(age)+ " " + "years old" + " " + "I am" + " " + str(height) + " " + "centimeter" + " " + str(knows_programming) + " " + str(is_handsome))

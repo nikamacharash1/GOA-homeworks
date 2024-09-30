@@ -1,0 +1,26 @@
+from turtle import *
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+exitonclick()

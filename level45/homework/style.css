@@ -1,0 +1,42 @@
+<<<<<<< HEAD
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent {
+    display: flex;
+    width: 800px;
+    height: 800px;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+img {
+    width: 500px;
+    height: 250px;
+=======
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent {
+    display: flex;
+    width: 800px;
+    height: 800px;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+img {
+    width: 500px;
+    height: 250px;
+>>>>>>> bac92c47168eeed9b1c41322530f9bf4e090690f
+}

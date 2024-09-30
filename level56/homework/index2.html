@@ -1,0 +1,43 @@
+<!-- 3) გამოიკვილეთ document-ი, შეამოწმეთ button,p,img ელემენტების კუთვნილებები და შეუცვალეთ თითოეულს 5-ი, interal JavaScript-ის გამოყენებით -->
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Modification</title>
+</head>
+<body>
+
+    <p id="paragraph">hello</p>
+    <img id="image" src="./download (30).jpg" alt="სურათი" width="300" height="200">
+    <button id="button">homework2</button>
+
+    <script>
+        
+        const p = document.getElementById('paragraph');
+        p.innerText = 'hi'; 
+        p.style.color = 'purple';                 
+        p.style.fontSize = '40px';             
+        p.style.fontWeight = 'bolder';           
+        p.style.textAlign = 'end';          
+
+        
+        const img = document.getElementById('image');
+        img.src = 'download (1).jpg';               
+        img.alt = 'ახალი სურათი';              
+        img.width = 400;                       
+        img.height = 300;                      
+        img.style.border = '2px solid black';  
+
+        
+        const button = document.getElementById('button');
+        button.innerText = 'ახალი ტექსტი!';    
+        button.style.backgroundColor = 'brown';  
+        button.style.color = 'purple';            
+        button.style.fontSize = '34px';          
+        button.style.borderRadius = '10px';       
+    </script>
+
+</body>
+</html>
+

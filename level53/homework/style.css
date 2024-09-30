@@ -1,0 +1,85 @@
+.container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    margin: 10px;
+}
+
+/* Translate Animation */
+@keyframes translateAnimation {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100px);
+    }
+}
+
+.div1 {
+    animation: translateAnimation 2s infinite alternate;
+}
+
+/* Scale Animation */
+@keyframes scaleAnimation {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.5);
+    }
+}
+
+.div2 {
+    animation: scaleAnimation 2s infinite alternate;
+}
+
+/* Rotate Animation */
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+.div3 {
+    animation: rotateAnimation 2s infinite alternate;
+}
+
+/* Skew Animation */
+@keyframes skewAnimation {
+    from {
+        transform: skewX(0deg) skewY(0deg);
+    }
+    to {
+        transform: skewX(20deg) skewY(10deg);
+    }
+}
+
+.div4 {
+    animation: skewAnimation 2s infinite alternate;
+}
+
+/* Combined Animation */
+@keyframes combinedAnimation {
+    from {
+        transform: translate(0, 0) rotate(0deg);
+        transform-origin: center;
+    }
+    to {
+        transform: translate(50px, 50px) rotate(45deg);
+        transform-origin: top left;
+    }
+}
+
+.div5 {
+    animation: combinedAnimation 2s infinite alternate;
+}

@@ -1,0 +1,100 @@
+{
+	"folders": [
+		{
+			"name": "hakaton-v5",
+			"path": "../.."
+		},
+		{
+			"name": "level 0",
+			"path": "../../../level 0"
+		},
+		{
+			"name": "level 1",
+			"path": "../../../level 1"
+		},
+		{
+			"name": "level 2",
+			"path": "../../../level 2"
+		},
+		{
+			"name": "level 3",
+			"path": "../../../level 3"
+		},
+		{
+			"name": "level 4",
+			"path": "../../../level 4"
+		},
+		{
+			"name": "level5",
+			"path": "../../../level5"
+		},
+		{
+			"name": "level6",
+			"path": "../../../level6"
+		},
+		{
+			"name": "level7",
+			"path": "../../../level7"
+		},
+		{
+			"name": "level8",
+			"path": "../../../level8"
+		},
+		{
+			"name": "level9",
+			"path": "../../../level9"
+		},
+		{
+			"name": "level10",
+			"path": "../../../level10"
+		},
+		{
+			"name": "level11",
+			"path": "../../../level11"
+		},
+		{
+			"name": "level12",
+			"path": "../../../level12"
+		},
+		{
+			"name": "level13",
+			"path": "../../../level13"
+		},
+		{
+			"name": "level14",
+			"path": "../../../level14"
+		},
+		{
+			"name": "level15",
+			"path": "../../../level15"
+		},
+		{
+			"name": "level16",
+			"path": "../../../level16"
+		},
+		{
+			"name": "level17",
+			"path": "../../../level17"
+		},
+		{
+			"name": "level18",
+			"path": "../../../level18"
+		},
+		{
+			"name": "level20",
+			"path": "../../../level20"
+		},
+		{
+			"name": "level21",
+			"path": "../../../level21"
+		},
+		{
+			"name": "level22",
+			"path": "../../../level22"
+		},
+		{
+			"name": ".git",
+			"path": "../../../.git"
+		}
+	]
+}

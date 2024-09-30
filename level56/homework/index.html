@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework</title>
+</head>
+<body>
+
+    <h1>homewrk js</h1>
+    <img id="image" src="./download (1).jpg" alt="სურათი" width="300" height="200">
+
+    <button onclick="changeImage('acharuli-khachapuri-georgian-bread-cheese-egg-65537053.webp')">სურათი 1</button>
+    <button onclick="changeImage('download (30).jpg')">სურათი 2</button>
+    <button onclick="changeImage('download (1).jpg')">სურათი 3</button>
+
+    <script>
+        function changeImage(imageSrc) {
+            document.getElementById('image').src = imageSrc;
+        }
+    </script>
+
+</body>
+</html>

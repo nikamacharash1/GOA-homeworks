@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+ul {
+    text-align: center;
+    text-decoration-style:dotted ;
+    text-decoration: underline;
+    color: blue;
+}
+ol {
+    text-align: end;
+    color: brown;
+=======
+ul {
+    text-align: center;
+    text-decoration-style:dotted ;
+    text-decoration: underline;
+    color: blue;
+}
+ol {
+    text-align: end;
+    color: brown;
+>>>>>>> bac92c47168eeed9b1c41322530f9bf4e090690f
+}

@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+h1 {
+    text-align: center;
+}
+p {
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 0, 0);
+}
+h3 {
+    text-shadow: 3px 3px 1px midnightblue;
+=======
+h1 {
+    text-align: center;
+}
+p {
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 0, 0);
+}
+h3 {
+    text-shadow: 3px 3px 1px midnightblue;
+>>>>>>> bac92c47168eeed9b1c41322530f9bf4e090690f
+}
