@@ -1,0 +1,45 @@
+<!-- 3) შექმენით საიტი სადაც იქნება სარეგისტრაციო ფორმა, რომელსაც ექნება სამი შესაყვანი ველი. სახელი ემაილი და პაროლი.
+  ასევე მომხარებელს აარჩევნიეთ თავისი სქესი(გამოიყენეთ radio-ს ტიპის ინფუთები და გადაეცეით მათ ერთნაირი name ატრიბუტი).
+   შექმენით ფუნქცია, რომელიც წამოიღებს ფორმიდან მონაცემებს. შეამოწმეთ პაროლის სიგრძე. თუ ნაკლებია 8 სიმბოლოზე, 
+   მომხარებელს გამოუტანეთ ალერტ მესიჯი: Password is to short, სხვა შემთხვევაში შექმენით ობიექტი, რომელსაც გადასცემთ შემოტანილ მნიშვნელობებს, 
+ ხოლო ეს ობიექტი უნდა ჩაამატოთ სიაში სახელად dateBase, რომელიც ფუნქციის გარეთ იქნება შექმნილი და მასში ყოველი ახალი ობიექტის დამატების შემდეგ კონსოლში გამოიტანეთ ეს მასივი -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="script2.js"></script>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Contact Us</h1>
+        <form id="contactForm">
+            <label for="name">name</label>
+            <input type="text" id="name" required>
+            <span class="error" id="nameError"></span>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+            <span class="error" id="emailError"></span>
+
+            <label for="password">password</label>
+            <textarea id="message" required></textarea>
+            <span class="error" id="passwordError"></span>
+
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">man</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">woman</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">other</label>
+
+            
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
