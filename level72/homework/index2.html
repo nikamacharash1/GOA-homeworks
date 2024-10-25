@@ -1,0 +1,74 @@
+<!-- 5) პროექტი:შექმენით პროგრამა ტაიმერი, რომელსაც გადასცემთ 3 ღილაკს Start,Pause,Reset -->
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ტაიმერი</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #timer {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="timer">00:00:00</div>
+    <button id="startButton">Start</button>
+    <button id="pauseButton">Pause</button>
+    <button id="resetButton">Reset</button>
+
+    <script>
+        let timer;
+        let seconds = 0;
+        let isRunning = false;
+
+        function updateTimerDisplay() {
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
+
+            const formattedTime = 
+                String(hours).padStart(2, '0') + ':' + 
+                String(minutes).padStart(2, '0') + ':' + 
+                String(secs).padStart(2, '0');
+
+            document.getElementById('timer').textContent = formattedTime;
+        }
+
+        document.getElementById('startButton').addEventListener('click', function() {
+            if (!isRunning) {
+                isRunning = true;
+                timer = setInterval(function() {
+                    seconds++;
+                    updateTimerDisplay();
+                }, 1000);
+            }
+        });
+
+        document.getElementById('pauseButton').addEventListener('click', function() {
+            isRunning = false;
+            clearInterval(timer);
+        });
+
+        document.getElementById('resetButton').addEventListener('click', function() {
+            isRunning = false;
+            clearInterval(timer);
+            seconds = 0;
+            updateTimerDisplay();
+        });
+    </script>
+</body>
+</html>
+
+
