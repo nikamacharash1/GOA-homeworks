@@ -1,0 +1,64 @@
+/* General reset and font setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Figtree', sans-serif;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 42%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Card styling */
+  .card {
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-size: 16px;
+  }
+  
+  .card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card__content {
+    padding: 20px;
+  }
+  
+  .card__title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  
+  .card__description {
+    margin-bottom: 20px;
+  }
+  
+  .card__footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: hsl(0, 0%, 7%);
+  }
+  
+  .card__author, .card__date {
+    color: hsl(0, 0%, 42%);
+  }
+  
+  /* Hover effect */
+  .card:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease-in-out;
+  }
+  

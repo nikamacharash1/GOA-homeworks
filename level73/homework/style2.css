@@ -1,0 +1,9 @@
+/* // >შექმენით div ბლოკი და ჩაწერეთ შიგნით ტექსტი, შემდეგ js ის ფაილის გამოყენებით შეაბრუნეთ მათი ფერები, ანუ div ბლოკის ფერი მიანიჭეთ ტექსტს და ტექსტის ფერი დივ ბლოკს */
+.color-block {
+    background-color: blue; 
+    color: black; 
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    border: 1px solid rgb(243, 0, 0);
+}

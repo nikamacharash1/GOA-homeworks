@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+.container {
+    text-align: center;
+}
+
+
+.animated-btn {
+    background-color: #db3434; 
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    letter-spacing: 2px; 
+}
+
+
+.animated-btn:hover {
+    transform: scale(1.1); 
+    background-color: #0003c2; 
+    letter-spacing: 3px; 
+}
+
+.animated-btn:active {
+    background-color: #960f00; 
+    letter-spacing: 1px; 
+}
