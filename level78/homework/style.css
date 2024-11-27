@@ -1,4 +1,3 @@
-/* General reset and font setup */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +14,6 @@
     height: 100vh;
   }
   
-  /* Card styling */
   .card {
     width: 350px;
     background-color: white;
@@ -56,7 +54,6 @@
     color: hsl(0, 0%, 42%);
   }
   
-  /* Hover effect */
   .card:hover {
     transform: translateY(-10px);
     transition: transform 0.3s ease-in-out;
