@@ -1,20 +1,15 @@
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
-# jer ar dadebula davaleba!!!!!!!!!!!!!!!!!!
+# no homework
+# no homework
+# no homework
+# no homework
+# no homework
+# no homework
+# no homework
+# no homework
+# no homework
+# no homework
+# no homework
+# no homework
+# no homework
+# no homework
+# no homework
