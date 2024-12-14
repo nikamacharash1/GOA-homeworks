@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>goa homework</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>რეგისტრაცია</h2>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="name">name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="confirmPassword">password 2time:</label><br>
+        <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+
+        <label for="age">age:</label><br>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <input type="submit" value="save">
+    </form>
+
+    <p id="error-message" class="error"></p>
+
+    <script>
+        const validUsers = {
+            "nika": "nika3333",
+            "vano": "vano555"
+        };
+
+        function validateForm() {
+            const errorMessage = document.getElementById("error-message");
+            errorMessage.textContent = ""; 
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+            const age = document.getElementById("age").value;
+
+            if (!validUsers[name] || validUsers[name] !== password) {
+                errorMessage.textContent = "please enter name and password.";
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                errorMessage.textContent = "incorrect.";
+                return false;
+            }
+
+            if (age < 18) {
+                errorMessage.textContent = "you are  not 18+.";
+                return false;
+            }
+
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.(com|org|net)$/;   
+            if (!emailPattern.test(email)) {
+                errorMessage.textContent = "it's not valid.";
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

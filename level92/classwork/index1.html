@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classwork</title>
+    <style>
+        #error-message {
+            color: red;
+            display: none; 
+            font-size: 14px;
+        }
+
+        #text-input {
+            font-size: 16px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>enter text</h2>
+    
+    <input type="text" id="text-input" placeholder="enter text">
+    <p id="error-message">!!!!error-message!!!!</p>
+
+    <script>
+        const textInput = document.getElementById('text-input');
+        const errorMessage = document.getElementById('error-message');
+        textInput.addEventListener('input', function() {
+            const inputValue = textInput.value;
+            const isValid = /^[a-zA-Z]*$/.test(inputValue);   
+            if (!isValid) {
+                errorMessage.style.display = 'block';
+            } else {
+                errorMessage.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>

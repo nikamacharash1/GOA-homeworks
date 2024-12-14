@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>პაროლის სიძლიერე</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>password</h2>
+
+    <form id="passwordForm">
+        <div class="form-group">
+            <label for="password">password:</label>
+            <input type="password" id="password" name="password" required oninput="checkPasswordStrength()">
+            <p id="strengthText" class="strength-text"></p>
+        </div>
+        <input type="submit" value="save" disabled>
+    </form>
+
+    <script src="script.js"></script> 
+
+</body>
+</html>

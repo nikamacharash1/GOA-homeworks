@@ -1,0 +1,24 @@
+  
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classwork</title>
+</head>
+<body>
+
+    <h2>enter text</h2>
+    
+    <textarea id="text-input" rows="4" cols="50" placeholder="enter text"></textarea>
+    <p>characters: <span id="char-count">0</span></p>
+    <script>
+        const textInput = document.getElementById('text-input');
+        const charCount = document.getElementById('char-count');
+        textInput.addEventListener('input', function() {
+        charCount.textContent = textInput.value.length;
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.counter {
+    font-size: 50px;
+    font-weight: bold;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #ccc;
+    width: 100px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8e41;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:disabled {
+    background-color: #ccc;
+}
+
+button:disabled:hover {
+    background-color: #ccc;
+}
