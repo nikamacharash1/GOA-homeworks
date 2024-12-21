@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    background-color: #2F5A76;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.square {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #F5BB60; 
+    transform: rotate(45deg);
+}
+
+.bar {
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    background-color: #F5BB60;
+}
+
+.top {
+    top: -60px;
+    left: 15px;
+    transform: rotate(45deg);
+}
+
+.bottom {
+    bottom: -60px;
+    left: 15px;
+    transform: rotate(45deg);
+}
+
+.left {
+    top: 15px;
+    left: -60px;
+    transform: rotate(45deg);
+}
+
+.right {
+    top: 15px;
+    right: -60px;
+    transform: rotate(45deg);
+}
