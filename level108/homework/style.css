@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+}
+
+.container h2 {
+    color: #2ab2af;
+    margin-bottom: 10px;
+}
+
+.guarantee {
+    color: #c0df34;
+    font-weight: bold;
+}
+
+.description {
+    color: #98a6bd;
+    margin-bottom: 20px;
+}
+
+.subscription {
+    display: flex;
+    flex-direction: column;
+    background-color: #2ab2af;
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.price h3, .why-us h3 {
+    margin-top: 0;
+}
+
+.amount {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.amount span {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.note {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.sign-up {
+    background-color: #c0df34;
+    border: none;
+    padding: 10px 20px;
+    color: #2ab2af;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sign-up:hover {
+    background-color: #b5d32c;
+}
+
+.why-us {
+    background-color: #2ab2af;
+    color: #ffffff;
+    padding: 20px;
+    text-align: left;
+}
+
+.why-us ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.why-us li {
+    margin-bottom: 10px;
+}
