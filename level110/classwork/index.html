@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals Wiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Animals Wiki</h1>
+        <p>Learn more about animals!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showCategory('mammals')">Mammals</a></li>
+            <li><a href="#" onclick="showCategory('birds')">Birds</a></li>
+            <li><a href="#" onclick="showCategory('reptiles')">Reptiles</a></li>
+        </ul>
+    </nav>
+
+    <section id="animals-container">
+        <div id="animals-list"></div>
+        <div id="animal-details"></div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
