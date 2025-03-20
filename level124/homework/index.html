@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Scheduler</title>
+</head>
+<body>
+  <h1>Message Scheduler</h1>
+  
+  <div>
+    <input type="text" id="message" placeholder="Enter message">
+    <input type="number" id="delay" placeholder="Enter delay in ms">
+    <button id="submitBtn">Submit</button>
+  </div>
+  
+  <script>
+    const submitBtn = document.getElementById('submitBtn');
+    const messageInput = document.getElementById('message');
+    const delayInput = document.getElementById('delay');
+    
+    let messageQueue = [];
+    
+    submitBtn.addEventListener('click', () => {
+      const message = messageInput.value;
+      const delay = parseInt(delayInput.value, 10);
+    
+      if (message && !isNaN(delay)) {
+        messageQueue.push({ message, delay });
+        if (messageQueue.length === 1) {
+          processMessageQueue();
+        }
+        messageInput.value = '';
+        delayInput.value = '';
+      } else {
+        alert('Please enter a valid message and delay!');
+      }
+    });
+    
+    function processMessageQueue() {
+      if (messageQueue.length === 0) return;
+      const { message, delay } = messageQueue[0];
+    
+      setTimeout(() => {
+        console.log(message);
+        messageQueue.shift();
+        processMessageQueue();
+      }, delay);
+    }
+  </script>
+</body>
+</html>

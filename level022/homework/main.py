@@ -40,4 +40,4 @@ def min_difference(list1, list2):
 
 
 def max_min_difference(numbers):
-    return max(numbers) - min(numbers)
+    return max(numbers) - min(numbers) 

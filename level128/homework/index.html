@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Animal Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .checkbox-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        img {
+            margin-top: 20px;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Random Animal Generator</h1>
+
+    <div class="checkbox-group">
+        <label><input type="checkbox" id="cat" value="cat"> Cat</label>
+        <label><input type="checkbox" id="dog" value="dog"> Dog</label>
+        <label><input type="checkbox" id="fox" value="fox"> Fox</label>
+    </div>
+
+    <button onclick="generateImage()">Generate</button>
+
+    <div id="image-container"></div>
+
+    <script>
+        const animalApis = {
+            cat: "https://api.thecatapi.com/v1/images/search",
+            dog: "https://dog.ceo/api/breeds/image/random",
+            fox: "https://randomfox.ca/floof/"
+        };
+
+        function getSelectedAnimals() {
+            return ["cat", "dog", "fox"].filter(id => document.getElementById(id).checked);
+        }
+
+        async function generateImage() {
+            const selectedAnimals = getSelectedAnimals();
+            if (selectedAnimals.length === 0) return alert("Please select at least one animal!");
+
+            const randomAnimal = selectedAnimals[Math.floor(Math.random() * selectedAnimals.length)];
+            const apiUrl = animalApis[randomAnimal];
+
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                let imageUrl;
+                if (randomAnimal === "cat") imageUrl = data[0].url;
+                else if (randomAnimal === "dog") imageUrl = data.message;
+                else if (randomAnimal === "fox") imageUrl = data.image;
+
+                document.getElementById("image-container").innerHTML = `<img src="${imageUrl}" alt="${randomAnimal}">`;
+            } catch (error) {
+                console.error("Error fetching image:", error);
+            }
+        }
+    </script>
+
+</body>
+</html>

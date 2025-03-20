@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f7f7f7;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        #display-div {
+            margin-top: 20px;
+            font-size: 18px;
+            min-height: 100px;
+        }
+        .fade {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="fetchJoke()">Get Joke</button>
+        <div id="display-div"></div>
+    </div>
+
+    <script>
+        async function fetchJoke() {
+            const displayDiv = document.getElementById('display-div');
+            displayDiv.innerHTML = '';
+
+            const response = await fetch('https://v2.jokeapi.dev/joke/Any?safe-mode');
+            const data = await response.json();
+
+            let joke = '';
+
+            if (data.type === 'single') {
+                joke = data.joke;
+            } else {
+                const setup = data.setup;
+                const delivery = data.delivery;
+
+                const setupDiv = document.createElement('div');
+                setupDiv.textContent = setup;
+                setupDiv.classList.add('fade');
+                displayDiv.appendChild(setupDiv);
+
+                setTimeout(() => {
+                    setupDiv.classList.remove('show');
+                    const deliveryDiv = document.createElement('div');
+                    deliveryDiv.textContent = delivery;
+                    deliveryDiv.classList.add('fade', 'show');
+                    displayDiv.appendChild(deliveryDiv);
+                }, 1000);
+            }
+
+            const idDiv = document.createElement('div');
+            idDiv.textContent = `Joke ID: ${data.id}`;
+            displayDiv.appendChild(idDiv);
+        }
+    </script>
+</body>
+</html>

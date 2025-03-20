@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke & Advice Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+        select, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+        select {
+            background-color: #f0f0f0;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .output {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Joke & Advice Generator</h1>
+    
+    <div class="container">
+        <label for="category">Choose a joke category:</label>
+        <select id="category">
+            <option value="Any">Any</option>
+            <option value="Programming">Programming</option>
+            <option value="Misc">Misc</option>
+            <option value="Dark">Dark</option>
+            <option value="Pun">Pun</option>
+            <option value="Spooky">Spooky</option>
+            <option value="Christmas">Christmas</option>
+        </select>
+        
+        <button onclick="fetchData()">Get Joke & Advice</button>
+
+        <div class="output">
+            <p><strong>Joke:</strong> <span id="joke">Loading...</span></p>
+            <p><strong>Advice:</strong> <span id="advice">Loading...</span></p>
+        </div>
+    </div>
+
+    <script>
+        async function fetchData() {
+            const category = document.getElementById("category").value;
+            const jokeUrl = `https://v2.jokeapi.dev/joke/${category}?safe-mode`;
+            const adviceUrl = "https://api.adviceslip.com/advice";
+
+            try {
+                const [jokeResponse, adviceResponse] = await Promise.all([
+                    fetch(jokeUrl),
+                    fetch(adviceUrl)
+                ]);
+
+                if (!jokeResponse.ok || !adviceResponse.ok) {
+                    throw new Error("Failed to fetch data");
+                }
+
+                const jokeData = await jokeResponse.json();
+                const adviceData = await adviceResponse.json();
+
+                let jokeText;
+                if (jokeData.type === "single") {
+                    jokeText = jokeData.joke;
+                } else {
+                    jokeText = `${jokeData.setup} - ${jokeData.delivery}`;
+                }
+
+                document.getElementById("joke").textContent = jokeText;
+                document.getElementById("advice").textContent = adviceData.slip.advice;
+            } catch (error) {
+                console.error("Error fetching data:", error);
+                document.getElementById("joke").textContent = "Failed to load joke.";
+                document.getElementById("advice").textContent = "Failed to load advice.";
+            }
+        }
+
+        fetchData();
+    </script>
+
+</body>
+</html>
