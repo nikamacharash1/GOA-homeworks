@@ -1,11 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+1
+def better_than_average(class_points, your_points):
+    return your_points > (sum(class_points) / len(class_points))
+
+2
+def count_positives_sum_negatives(arr):
+    if not arr:
+        return []
+    count_positives = sum(1 for x in arr if x > 0)
+    sum_negatives = sum(x for x in arr if x < 0)
+    return [count_positives, sum_negatives]
+
+3
+def dna_to_rna(dna):
+    return dna.replace('T', 'U')
+
+4
+def zero_fuel(distance_to_pump, mpg, fuel_left):
+    return distance_to_pump <= mpg * fuel_left
+
+5
+def bmi(weight, height):
+    bmi = weight / (height ** 2)
+    if bmi <= 18.5:
+        return "Underweight"
+    elif bmi <= 25.0:
+        return "Normal"
+    elif bmi <= 30.0:
+        return "Overweight"
+    else:
+        return "Obese"

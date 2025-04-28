@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+
+    <!-- Header -->
+    <header class="bg-pink-600 text-white p-4 text-center rounded-lg shadow-md">
+        <h1 class="text-3xl font-semibold">Countdown Timer</h1>
+        <p class="mt-2 text-lg">Enter a date and see how much time is left until then!</p>
+    </header>
+
+    <!-- Timer Section -->
+    <main class="mt-8">
+        <div class="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md">
+            <label for="target-date" class="block text-lg font-medium">Enter Target Date:</label>
+            <input type="date" id="target-date" class="mt-2 p-2 w-full border rounded-lg" />
+
+            <button class="mt-4 bg-pink-600 text-white py-2 px-4 rounded-lg w-full hover:bg-pink-700" onclick="startTimer()">
+                Start Countdown
+            </button>
+
+            <div id="timer" class="mt-8 text-center text-3xl font-bold text-gray-700">
+                <p id="days-left">-- Days</p>
+                <p id="time-left">-- : -- : --</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function startTimer() {
+            // Get the target date from the input field
+            const targetDate = document.getElementById('target-date').value;
+            if (!targetDate) {
+                alert("Please enter a valid date.");
+                return;
+            }
+
+            const target = new Date(targetDate);
+            const currentYear = new Date().getFullYear();
+            const targetDateInThisYear = new Date(target.setFullYear(currentYear));
+
+            // Timer function
+            const timerInterval = setInterval(function() {
+                const now = new Date();
+                const timeLeft = targetDateInThisYear - now;
+
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById('timer').innerHTML = '<p class="text-red-500">The date has passed!</p>';
+                } else {
+                    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                    document.getElementById('days-left').textContent = `${days} Days`;
+                    document.getElementById('time-left').textContent = `${hours} : ${minutes} : ${seconds}`;
+                }
+            }, 1000);
+        }
+    </script>
+    
+</body>
+</html>
